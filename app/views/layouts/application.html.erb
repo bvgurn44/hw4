@@ -14,14 +14,14 @@
   <!--NAVBAR-->
 <nav class="navbar navbar-expand-lg bg-light">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">Tacostagram</a>
+    <a class="navbar-brand" href="/places">Tacostagram</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
+          <a class="nav-link active" aria-current="page" href="/places">Home</a>
         </li>
       </ul>
     <ul ckass="navbar-nav">
@@ -29,7 +29,7 @@
       Logged in as: <%= @current_user["first_name"] %> |
       <a href="/logout" class="btn btn-default">Logout</a>
     <% else %>
-      <a href="/login" class="btn btn-default">Login</a> |
+      <a href="/sessions/new" class="btn btn-default">Login</a> |
       <a href="/users/new" class="btn btn-default">Sign Up</a>
     <% end %>
     </div>

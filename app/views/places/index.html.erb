@@ -5,7 +5,12 @@
     <li><a href="/places/<%= place["id"] %>"><%= place["name"] %></a></li>
   <% end %>
 </ul>
-
-<p>
+ <% if @current_user %>
+      <a href="/places/new" class="btn btn-outline-primary btn-lg ">New Place</a>
+          <% else %>
+  <% end %>
+<!--a href="/places/new" class="btn btn-outline-primary btn-lg ">New Place</a>
+<!--<a href="/places/new" class="btn btn-secondary btn-lg box-shadow--16dp">New Place</a>-->
+<!--<p>
   <a href="/places/new">New place</a>
-</p>
+</p>-->
