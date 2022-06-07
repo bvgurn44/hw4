@@ -1,6 +1,6 @@
 <h1>New Place</h1>
-
-<%= form_with :model => @place do |form| %>
+<% if @current_user %>
+  <%= form_with :model => @place do |form| %>
   <p>
     <%= form.label "name" %>
     <%= form.text_field "name" %>
@@ -8,5 +8,8 @@
   <p>
     <%= form.submit %>
   </p>
-<% end %>
+  <% end %>
+<% else %>
+  <p>You must be logged in to add a new place.</p>
+<%end%>
 <p><a href="/places">Back to Places</a></p>
