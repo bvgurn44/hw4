@@ -11,18 +11,18 @@ class SessionsController < ApplicationController
         redirect_to "/places"
       else
         flash["notice"] = "Incorrect email or password"
-        redirect_to "/sessions/new"
+        redirect_to "/login"
       end
     else
       flash["notice"] = "Incorrect email or password"
-      redirect_to "/sessions/new"
+      redirect_to "/login"
     end
   end
 
   def destroy
       session["user_id"] = nil
       flash[:notice] = "You are logged out"
-      redirect_to "/sessions/new"
+      redirect_to "/login"
   end
 end
   
