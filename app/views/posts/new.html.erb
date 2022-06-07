@@ -1,23 +1,26 @@
-<h1>New Post</h1>
-
 <h2>New Post</h2>
 
 <% if @current_user %>
   <%= form_with :model => @post do |form| %>
     <div class="mb-3">
-      <%= form.label "body", :class => "form-label" %>
-      <%= form.text_field "body", :class => "form-control" %>
+      <%= form.label "title", :class => "form-label" %>
+      <%= form.text_field "title", :class => "form-control" %>
     </div>
-
+    <div class="mb-3">
+      <%= form.label "description", :class => "form-label" %>
+      <%= form.text_field "description", :class => "form-control" %>
+    </div>
     <div class="mb-3">
       <%= form.label "uploaded_image", :class => "form-label" %>
       <%= form.file_field "uploaded_image", :accept => "image/png,image/jpg,image/jpeg,image/gif", :class => "form-control" %>
     </div>
-
+      <%= form.hidden_field "place_id" %> 
+      <%= form.hidden_field "user_id" %>
+      <%= form.hidden_field "posted_on" %> 
     <%= form.submit "Create Post", :class => "btn btn-primary" %>
   <% end %>
 <% else %>
-  You must first <a href="/login">login</a> to post.
+  You must first <a href="/sessions/new">login</a> to post.
 <% end %>
 <!--<%= form_with :model => @post do |form| %>
   <p>
