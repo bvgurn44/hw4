@@ -10,6 +10,12 @@
       <%= form.label "description", :class => "form-label" %>
       <%= form.text_field "description", :class => "form-control" %>
     </div>
+    
+    <div class="mb-3">
+      <%= form.label "posted on" %>
+      <%= form.date_field "posted_on" %>
+    </div>
+
     <div class="mb-3">
       <%= form.label "image", :class => "form-label" %>
       <%= form.file_field "image", :accept => "image/png,image/jpg,image/jpeg,image/gif", :class => "form-control" %>
