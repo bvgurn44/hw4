@@ -22,4 +22,7 @@ test:
 
 production:
   <<: *default
-  database: db/production.sqlite3
+  adapter: postgresql
+  database: bg_hw_4_production
+  username: bg_hw_4
+  password: <%= ENV["BG_HW_4_DATABASE_PASSWORD"] %>: db/production.sqlite3
