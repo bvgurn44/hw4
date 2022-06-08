@@ -1,14 +1,16 @@
 <h1><%= @place["name"] %></h1>
 <% if @current_user %>
      <a href="/posts/new?place_id=<%= @place["id"] %>" class="btn btn-outline-primary btn-lg shadow p-3 mb-5 rounded">New Post</a>
+ <div class="pb-5">
   <h2>My Posts</h2>
+  </div>
   <div class="row">
   <% for post in @posts %>
-  <div class= "col-md-4 col-sm-6">
+  <div class= "col-md-4 col-sm-6 px-3 pb-3">
     <h3><%= post["title"] %></h3>
-    <h4><%= post["posted_on"] %></h4>
+    <p><%= post["posted_on"] %></p>
      <% if post.image.attached? %>
-        <img src="<%= url_for(post.image) %>" class="img-fluid">
+        <img src="<%= url_for(post.image) %>" class="img-fluid w-100">
       <% else %>
         <img src="<%= post["image"] %>" class="img-fluid">
       <% end %>
